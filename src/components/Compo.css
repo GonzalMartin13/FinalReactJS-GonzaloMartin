@@ -1,0 +1,78 @@
+.Ingreso {
+    border-right: 5px white double;
+    background-image: url("../IMG/fondo.jpg");
+    background-size: cover;
+    height: 40rem;
+    place-items: center;
+    color: red;
+    display: flex;
+}
+.IngresoH1{
+    text-decoration:none ;
+    color: black;
+    filter: drop-shadow(2px 4px 8px dimgray);
+}
+.IngresoH1:hover{
+    color:dimgray;
+}
+
+.ITC {
+    border-right: 5px white double;
+    background-color: gainsboro;
+    height: 40rem;
+    place-items: center;
+}
+
+.IDC{
+    background-color: gainsboro;
+    border-top: 5px white double;
+    border-bottom: 5px white double;
+    height: 20rem;
+    place-items: center;
+    margin-top: 25%;
+}
+
+.cartaItem{
+    width: fit-content;
+    padding: 1rem;
+}
+
+.IL{
+    border: 5px white double;
+    border-radius: 5%;
+    margin: 0.5rem;
+    width: 100%;
+
+
+}
+
+.Boton{
+    width: 70%;
+    border: solid 3px grey;
+    border-radius: 25px;
+}
+
+.IMGID{
+    height: 300px;
+    width: 40%;
+    border-radius: 10%;
+}
+
+.header{
+    background-color: rgb(131, 130, 130);
+    height: auto;
+    width: 101%;
+    border-bottom:  5px  double whitesmoke;
+    border-right:  5px  double whitesmoke;
+    color: aliceblue;
+    align-items: baseline;
+}
+.header ul{
+    list-style: none;
+}
+
+.listnav{
+    text-decoration: none;
+    color: aliceblue;
+}
+
