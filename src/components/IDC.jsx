@@ -1,30 +1,18 @@
 import React, {useEffect, useState} from "react";
+import { getFirestore, doc, getDoc } from "firebase/firestore";
 import { useParams } from "react-router-dom";
 import ID from "./ID";
-import {productos} from "./productos";
+
 
 const IDC = () => {    
     const [product, setProduct] = useState({});
     const {id} = useParams();
-    console.log(id);
 
     useEffect(()=>{
-        const getProduct = () => 
-            new Promise ((res, rej) =>{
-                const cursos = productos.find((producto) => producto.nombre === id);
-                setTimeout (() =>{
-                    res(cursos);
-                }, 500);
-            });
+        const querydb = getFirestore();
+        const queryDoc = doc(querydb, "LineasProds", {id} );
+        getDoc(queryDoc) .then (res => setProduct({id : res.id, ...res.data()}) )
 
-            getProduct()
-            .then ((cursos)=>{
-                setProduct(cursos)
-                
-            })
-            .catch ((error) =>{
-                alert ("ERROR")
-            })
     }, []);
 
     console.log({product});
